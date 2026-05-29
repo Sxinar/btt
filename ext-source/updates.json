@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "btt-sxi@artadosearch.com": {
+      "updates": [
+        {
+          "version": "2.0",
+          "update_link": "https://sxi.is-a.dev/btt.xpi"
+        }
+      ]
+    }
+  }
+}

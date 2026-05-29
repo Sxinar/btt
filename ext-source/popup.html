@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    :root {
+      --bg-primary: #0b0f19;
+      --bg-secondary: #151d30;
+      --accent: #00b0ff;
+      --accent-glow: rgba(0, 176, 255, 0.2);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --border-color: #24324d;
+    }
+
+    body {
+      width: 320px; /* İçeriğin daha rahat nefes alması için biraz genişletildi */
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 16px; 
+    }
+
+    /* Başlık Alanı Modernizasyonu */
+    .header-area {
+      text-align: center;
+    }
+
+    h3 { 
+      margin: 0; 
+      color: var(--text-main); 
+      font-size: 18px; 
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+    
+    h3 span {
+      color: var(--accent);
+      text-shadow: 0 0 12px var(--accent-glow);
+    }
+
+    .divider { 
+      height: 1px; 
+      background: linear-gradient(90deg, transparent, var(--border-color), transparent); 
+      width: 100%; 
+      margin-top: 12px;
+    }
+
+    .section { 
+      display: flex; 
+      flex-direction: column; 
+      gap: 8px; 
+    }
+
+    label { 
+      font-size: 12px; 
+      color: var(--text-muted); 
+      font-weight: 600; 
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    /* Select/Açılır Kutu Modernizasyonu */
+    .select-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    select {
+      width: 100%; 
+      padding: 12px 14px; 
+      background: var(--bg-secondary); 
+      color: var(--text-main);
+      border: 1px solid var(--border-color); 
+      border-radius: 10px; 
+      cursor: pointer;
+      font-weight: 500; 
+      font-size: 14px; 
+      outline: none; 
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      appearance: none; /* Varsayılan çirkin oku kaldırır */
+      -webkit-appearance: none;
+    }
+
+    /* Yumuşak odaklanma ve hover efektleri */
+    select:hover { 
+      border-color: var(--accent); 
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+
+    /* Özel aşağı ok ikonu (CSS ile yapıldı) */
+    .select-wrapper::after {
+      content: '◆';
+      font-size: 10px;
+      color: var(--accent);
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      transition: transform 0.25s ease;
+    }
+    
+    .select-wrapper:hover::after {
+      transform: translateY(-50%) scale(1.2);
+    }
+
+    /* Seçenek listesinin arka planını bazı tarayıcılarda düzeltmek için */
+    select option {
+      background: #151d30;
+      color: #f1f5f9;
+    }
+
+    /* Footer Alanı */
+    .footer { 
+      text-align: center; 
+      font-size: 11px; 
+      color: var(--text-muted); 
+      opacity: 0.7;
+      margin-top: 6px; 
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header-area">
+      <h3>BTT Forum <span>Toolkit</span></h3>
+      <div class="divider"></div>
+    </div>
+    
+    <div class="section">
+      <label for="themeSelect">Forum Teması</label>
+      <div class="select-wrapper">
+        <select id="themeSelect">
+          <option value="default">Varsayılan (Forum Teması)</option>
+          <option value="oled">Artado OLED Tema (Zifiri Karanlık)</option>
+          <option value="catppuccin">Catppuccin Mocha</option>
+          <option value="dracula">KDE Dracula (Klasik Karanlık)</option>
+          <option value="nord">KDE Nord (Kutup Esintisi)</option>
+          <option value="tokyonight">Tokyo Night (Neon Gece)</option>
+          <option value="gruvbox">XFCE Gruvbox (Retro)</option>
+          <option value="oneDark">Atom One Dark</option>
+          <option value="cyberpunk">Cyberpunk 2077</option>
+          <option value="monokai">Monokai Pro</option>
+          <option value="matrix">Kali Linux Matrix (Digital Rain)</option>
+          <option value="solarizedDark">Solarized Dark</option>
+        </select>
+      </div>
+    </div>
+    
+    <div class="footer">BTT Community için sevgiyle tasarlandı - Sxinar - Artado Search</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
