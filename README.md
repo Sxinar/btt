@@ -20,7 +20,7 @@ Ekran Görüntüleri:
 
 
 ## Özellikler:
-- Sohbette Alıntıla Düğmesi (Artık fish sinirlenmeyecek :D)
+- Sohbette Alıntıla Düğmesi
 - Konulardaki yanıtla düğmesinin alıntılama özelliği
 - Tema seçenekleri
 - Updates özelliği ile otomatik update sistemi
