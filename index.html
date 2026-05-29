@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTT Forum Toolkit - Eklenti Sayfası</title>
+    <link rel="icon" type="image/png" href="https://btt.community/uploads/default/original/2X/9/9d8ca9c52e796ef1acbf8888284b16a95f6945b1.png">
+    <style>
+        :root {
+            --bg-color: #1a1a1b;
+            --card-bg: #272729;
+            --text-main: #d7dadc;
+            --text-muted: #818384;
+            --accent: #0079d3;
+            --border: #343536;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            border: 3px solid var(--accent);
+            padding: 5px;
+            background: white;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 0 0 0.5rem 0;
+            color: #fff;
+        }
+
+        .version {
+            display: inline-block;
+            background: #46d160;
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            line-height: 1.6;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: block;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 999px;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.2s;
+            margin-bottom: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #1484d6;
+            transform: translateY(-2px);
+        }
+
+        .links {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .links a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.75rem;
+            color: #4f5152;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        code {
+            background: #101010;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://btt.community/uploads/default/original/2X/9/9d8ca9c52e796ef1acbf8888284b16a95f6945b1.png" alt="BTT Logo" class="logo">
+    <h1>BTT Forum Toolkit</h1>
+    <div class="version">v2.0</div>
+    <p>
+        BTT Forum için özel temalar, geliştirilmiş alıntı sistemi ve modern araçlar sunan basit ama etkili eklenti seti.
+    </p>
+
+    <a href="https://sxi.is-a.dev/btt/btt-toolkit-v2.0.xpi" class="btn">Firefox'a Kur (.xpi)</a>
+    
+    <div class="links">
+        <a href="https://btt.community" target="_blank">btt.community</a> &bull; 
+        <a href="https://sxi.is-a.dev/btt/updates.json" target="_blank">Update JSON</a>
+    </div>
+
+    <div class="footer">
+        ID: <code>btt-sxi@artadosearch.com</code><br>
+        © 2024 BTT Forum Toolkit
+    </div>
+</div>
+
+</body>
+</html>
